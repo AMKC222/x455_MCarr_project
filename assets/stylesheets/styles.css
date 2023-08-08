@@ -73,12 +73,12 @@ header a.logo {
   position: absolute;
   display: block;
   width: 300px;
-  height: 70px;
+  height: 80px;
   /* change dish-01.png to your loge image */
   background: url(../images/flourish\ logo\ \(1\).png) no-repeat 0 0;
   background-size: contain;
   z-index: 1;
-  top: 30px;
+  top: 40px;
   left: 30px;
 }
 header a.logo span {
@@ -244,6 +244,7 @@ background-attachment: fixed;
   border: 2px solid #FF6635;
   border-radius: 20px;
   background: linear-gradient(to bottom, #FFA285,#ff6635);
+  font-family: "font family 3";
 }
 .featured-title {
   text-align: center;
@@ -290,7 +291,7 @@ background-attachment: fixed;
 .column {
   float: left;
   width: 50%;
-  padding: 10px;
+  padding: none;
 }
 
 /* Clear floats after the columns */
@@ -301,9 +302,15 @@ background-attachment: fixed;
 }
 .HalfPgImg {
   max-width: 100%;
-  max-height: flex;
+  max-height: 100%;
   padding-top: none;
-  padding-right: 30px;
+  padding-right: 100px;
+}
+.Plant-h2 {
+  color: #ff906d;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  font-size: 36pt;
 }
 
 div.scrolling {
@@ -312,10 +319,6 @@ div.scrolling {
   padding: 20px;
   border: #739462 solid 1px;
   overflow: auto;
-  /* auto - similar to scroll, but it adds scrollbars only when necessary */
-  /* overflow is shortcut for overflow-y and overflow-x */
-  /* https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_overflow-x */
-  /* https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp */
 }
 
 ul {
@@ -325,7 +328,8 @@ ul {
 ul li {
   color:#3a6920;
   margin: 5px;
-  line-height: 50px;
+  line-height: 75px;
+  font-size: 18pt;
 }
 
 
@@ -470,6 +474,52 @@ padding: 0px 40px 0px 40px;
   }
   video {
     display: none;
+  }
+  .column {
+    float: left;
+    width: 50%;
+    padding: none;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .HalfPgImg {
+    max-width: 100%;
+    max-height: 100%;
+    padding-top: none;
+    padding-right: 100px;
+  }
+  .Plant-h2 {
+    color: #ff906d;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    font-size: 24pt;
+  }
+
+  div.scrolling {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border: #739462 solid 1px;
+    overflow: auto;
+    /* auto - similar to scroll, but it adds scrollbars only when necessary */
+    /* overflow is shortcut for overflow-y and overflow-x */
+    /* https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_overflow-x */
+    /* https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp */
+  }
+  ul {
+    padding: 25px;
+  }
+  
+  ul li {
+    color:#3a6920;
+    margin: 5px;
+    line-height: 40px;
+    font-size: 14pt;
   }
 }
 
