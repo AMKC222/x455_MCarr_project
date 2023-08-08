@@ -1,0 +1,622 @@
+* {
+  /* Defines how the width and height of an element are calculated: should they include padding and borders, or not. */
+  /* box-sizing: border-box; Width and height apply to all parts of the element: content, padding and borders */
+  /* box-sizing: content-box; Width and height only apply to the content of the element */
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Font Family 1";
+  src: url("../fonts/Raleway-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Font Family 2";
+  src: url("../fonts/Roboto-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Font Family 3";
+  src: url("../fonts/Raleway-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Font Family 4";
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Font Family 5";
+  src: url("../fonts/Raleway-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Font Family 6";
+  src: url("../fonts/Raleway-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Roboto Medium';
+  src: url(../fonts/Roboto-Medium.ttf') format('woff2'),
+       url('../fonts/Roboto-Regular.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/* BEG styling headings */
+h1 {
+  margin: 0px 0px 20px 0px;
+  color: #ffffff;
+  font-size: 24pt;
+  font-weight: bold;
+  font-family: "font family 3";
+}
+
+h2 {
+  margin: 0px 0px 20px 0px;
+  color: #ff906d;
+  font-size: 20pt;
+  font-family: "font family 6";
+}
+h3 {
+  margin: 0px 0px 1.5em 0px;
+  color: #739462;
+  font-size: 1.1em;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+/* END styling headings */
+
+body {
+  margin: 0;
+  font-family: "Font Family 4";
+  font-size: 14pt;
+  background-color: #fffbf4;
+}
+
+/* BEG styling for logo on top */
+header a.logo {
+  position: absolute;
+  display: block;
+  width: 300px;
+  height: 70px;
+  /* change dish-01.png to your loge image */
+  background: url(../images/flourish\ logo\ \(1\).png) no-repeat 0 0;
+  background-size: contain;
+  z-index: 1;
+  top: 30px;
+  left: 30px;
+}
+header a.logo span {
+  display: none;
+}
+
+header a.logo:hover {
+  opacity: 0.8;
+}
+nav {
+  background-color: #ffffff;
+  padding: 50px 0px 0px 0px; /* Adjust the left padding to 0px */
+  display: flex; /* Add this line to use Flexbox */
+  justify-content: center; /* Center horizontally */
+}
+
+/* END styling for logo on top */
+
+/* BEG styling navigation bar */
+nav ul {
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+nav ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+nav ul li {
+  margin-left: 20px; /* Add spacing between menu items */
+}
+
+nav ul li:first-child {
+  margin-left: 0; /* Remove margin for the first item */
+}
+
+nav ul li a {
+  display: inline-block;
+  color: #666666;
+  text-decoration: none;
+  font-size: 16pt;
+  padding: 0px 20px; 
+  padding-bottom: 30px; 
+}
+
+/* styling hover nav item */
+nav ul li a:hover {
+  background-color: #ffffff;
+  text-decoration: none;
+  color: #ea6528;
+}
+
+.active-page {
+  background-color: #ffffff;
+}
+
+.active-page a {
+  color: #FFA285;
+}
+
+.active-menu-item {
+  color: #FFA285;
+}
+/* END styling navigation bar */
+
+/********** BEG for dropdown menu in small screen **********/
+.dropdown {
+  position: absolute;
+  display: none;
+  top: 0; /* top right bottom left work with position:absolute, set an absolute position where to put the dropdown menu */
+  right: 0px;
+}
+
+.dropbtn {
+  background-color: rgba(0, 102, 102, 0);
+  color: white;
+  padding: 21px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  line-height: normal; /* do this override/cascade the line-height set in carousel plugin */
+}
+
+.dropdown-content {
+  display: none; /* set display to none, so dropdown menu won't show till hover dropdown */
+  position: absolute;
+  right: 0;
+  background-color: rgba(0, 102, 102, 0.8);
+  min-width: 280px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  line-height: normal; /* do this override/cascade the line-height set in carousel plugin */
+}
+
+.dropdown-content a:hover {
+  background-color: #339999;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover {
+  background-color: rgba(0, 102, 102, 0.8);
+}
+/********** END for dropdown menu in small screen **********/
+
+/* BEG styling hero screen*/
+
+.hero {
+width: 100vw;
+height: 100vh;
+
+/*flexbox stuff*/
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: white;
+/*background styles*/
+background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(../images/heroimg_flourish.jpg);
+background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+.hero h1 {
+  font-size: 5em;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+.hero h2 {
+  color:#ffffff;
+  font-size: 30pt;
+  margin-top: 0;
+  margin-bottom: 50px;
+  line-height: 42pt;
+}
+.hero .btn {
+  display: block;
+  width: 300px;
+  padding: 1em;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  text-decoration: none;
+  font-size: 24pt;
+  border: 2px solid #FF6635;
+  border-radius: 20px;
+  background: linear-gradient(to bottom, #FFA285,#ff6635);
+}
+.featured-title {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color: #ff906d;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding-bottom: 40px;
+}
+
+.slick-next:before,
+.slick-prev:before {
+  color: #FFA285;
+}
+
+.image-responsive {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.slick-list {
+  margin: 0 -5px;
+}
+
+.slick-slide {
+  padding: 0 5px;
+}
+
+.your-class div p {
+  margin: 20px 0 15px 0;
+  text-align: center;
+  font-size: 16pt;
+  color:#3a6920;
+}
+/* END styling hero screen*/
+
+/* style Plants screen */
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.HalfPgImg {
+  max-width: 100%;
+  max-height: flex;
+  padding-top: none;
+  padding-right: 30px;
+}
+
+div.scrolling {
+  width: 500px;
+  height: 550px;
+  padding: 20px;
+  border: #739462 solid 1px;
+  overflow: auto;
+  /* auto - similar to scroll, but it adds scrollbars only when necessary */
+  /* overflow is shortcut for overflow-y and overflow-x */
+  /* https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_overflow-x */
+  /* https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp */
+}
+
+ul {
+  padding: 25px;
+}
+
+ul li {
+  color:#3a6920;
+  margin: 5px;
+  line-height: 50px;
+}
+
+
+/* END styling Plants screen */
+
+/* style page banner */
+header.food-page {
+  background: #eee, url(../images/woman-with-plants-in-the-greenhouse-2021-09-02-09-19-19-utc.jpg) no-repeat center; /* top center bottom - 1/3 of the image full height */
+  background-size: cover;
+  height: 450px;
+}
+
+header.page-3 {
+  /* add you own header here */
+}
+
+header.page-4 {
+  /* add you own header here */
+}
+
+header.page-5 {
+  /* add you own header here */
+}
+
+header.page-6 {
+  /* add you own header here */
+}
+
+
+/* Styling anchor link (hyperlink) */
+a {
+  color: #2455f5;
+  text-decoration: none;
+}
+
+/* BEG styling images */
+img.size01 {
+  max-width: 300px;
+  padding-bottom: 10px;
+}
+
+img.size02 {
+  max-width: 400px;
+  padding-bottom: 15px;
+}
+
+img.size03 {
+  max-width: 500px;
+  padding-bottom: 20px;
+}
+
+.padding-right {
+  padding-right: 30px;
+}
+
+.padding-left {
+  padding-left: 25px;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.to-top {
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+/* END styling images */
+
+/* set padding from browser edges for content */
+article > div {
+/* padding: top right bottom left */
+padding: 0px 40px 0px 40px;
+}
+
+@media screen and (max-width: 750px) {
+  /*header {
+    height: 240px;
+  }*/
+  header a.logo {
+    width: 120px;
+    height: 44px;
+  }
+  /*** for carousel area ***/
+  section > div.carousel-area {
+    width: 100%;
+    float: none;
+    margin-bottom: 40px;
+    /* padding: top right bottom left */
+    padding: 0px 40px 30px 40px;
+    border-right: none;
+    border-bottom: 1px solid #555;
+  }
+  /*** for carousel area ***/
+  article {
+    width: 100%;
+    float: none;
+    margin-bottom: 40px;
+  }
+  article > div {
+    margin: 0px 40px;
+    /* padding: top right bottom left */
+    padding: 0px 0px 30px 0px;
+    border-right: none;
+    border-bottom: 1px solid #555;
+  }
+  aside {
+    width: 100%;
+    float: none;
+  }
+
+  nav {
+    /* padding: top right bottom left */
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+  }
+  nav > ul {
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+
+  nav ul > li {
+    /* padding: top right bottom left */
+    margin: 0 15px
+  }
+  .flex-container > div {
+    width: 25%;
+  }
+  .flex-container > span > h2 {
+    text-align: center;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  video {
+    display: none;
+  }
+}
+
+/********** BEG for dropdown menu in small screen **********/
+@media screen and (max-width: 500px) {
+  nav {
+    padding: 20px 0;
+  }
+  
+  /* Hide the regular navigation menu */
+  nav > ul {
+    display: none;
+  }
+  
+  /* Style the background for the header in small screens */
+  header.food-page {
+    background: #eee url(../images/food-02.jpg) no-repeat center;
+    background-size: cover;
+    height: 270px;
+  }
+  
+  /* You can add your own styling for different header pages here */
+  header.page-3 {
+    /* add your own header styles here */
+  }
+  header.page-4 {
+    /* add your own header styles here */
+  }
+  header.page-5 {
+    /* add your own header styles here */
+  }
+  header.page-6 {
+    /* add your own header styles here */
+  }
+  
+  /* Display the dropdown menu when the menu button is clicked */
+  .dropdown {
+    display: block;
+    position: relative; /* Add this to make sure the dropdown menu is positioned relative to .dropdown */
+  }
+  
+  /* Adjust the width of the dropdown items */
+  .dropdown-content {
+    width: 100%; /* Adjust this value as needed */
+  }
+  
+  /* Style the dropdown content items */
+  .dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+  
+  /* Show the dropdown content when the .dropdown is hovered */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Additional styling for the background color of the .dropdown on hover */
+  .dropdown:hover {
+    background-color: rgba(0, 102, 102, 0.8);
+  }
+  
+  /* Adjust the width of .flex-container items */
+  .flex-container > div {
+    width: 50%;
+  }
+  
+  /* Adjust the height of scrolling content */
+  aside > div > div.scrolling {
+    height: 300px;
+  }
+}
+/********** END for dropdown menu in small screen **********/
+
+/*styling for about page */
+
+.new-h1 {
+  text-align: left;
+  color: #739462;
+  margin-bottom: 30px;
+  margin-top: none;
+}
+
+
+/* end About page styling */
+
+
+/* styling for footer */
+.footer {
+  background-color: #739462;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  flex: 1;
+  align-items: center; /* Add this line */
+}
+
+.footer-menu li {
+  font-size: 18px;
+  font-family: 'Roboto Medium', sans-serif;
+}
+
+.footer-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.footer-menu a:hover {
+  color: #FFA285; /* Change the color on hover */
+}
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 10px; /* Adjust the gap between icons */
+  justify-content: flex-end; /* Align icons to the right */
+  align-items: center;
+}
+.social-icons a {
+  text-indent: -9999px; /* Push text off-screen */
+}
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  display: block; /* Ensure the icon is treated as a block-level element */
+}
+
+
+
+
