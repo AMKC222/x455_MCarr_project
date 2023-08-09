@@ -99,7 +99,9 @@ nav {
 nav ul {
   list-style: none;
   margin: 0;
-  padding: 0px 0px 0px 35px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
 nav ul::after {
@@ -109,7 +111,7 @@ nav ul::after {
 }
 
 nav > ul > li {
-  float: left;
+  display: inline;
 }
 
 nav ul li a {
@@ -118,7 +120,6 @@ nav ul li a {
   text-decoration: none;
   font-size: 16pt;
   padding: 10px 20px 15px 20px;
-  width: auto;
 }
 
 /* styling hover nav item */
@@ -145,15 +146,15 @@ nav ul li a:hover {
 .dropdown {
   position: absolute;
   display: none;
-  top: 20px; /* top right bottom left work with position:absolute, set an absolute position where to put the dropdown menu */
-  right: 20px;
+  top: 0; /* top right bottom left work with position:absolute, set an absolute position where to put the dropdown menu */
+  right: 0;
 }
 
-.dropbtn {
+.drop-btn {
   background-color: rgba(0, 102, 102, 0);
   color: rgb(250, 197, 144);
   padding: 21px;
-  font-size: 16px;
+  font-size: 21pt;
   border: none;
   cursor: pointer;
   line-height: normal; /* do this override/cascade the line-height set in carousel plugin */
@@ -409,6 +410,7 @@ padding: 0px 40px 0px 40px;
   color: #ffffff;
   text-align: center;
   padding: 20px;
+  width: auto;
 }
 
 .footer-content {
@@ -429,8 +431,8 @@ padding: 0px 40px 0px 40px;
 }
 
 .footer-menu li {
-  font-size: 18px;
-  font-family: 'Roboto Medium', sans-serif;
+  font-size: 20pt;
+  font-family: "Font Family 2"
 }
 
 .footer-menu a {
@@ -455,8 +457,8 @@ padding: 0px 40px 0px 40px;
   text-indent: -9999px; /* Push text off-screen */
 }
 .social-icons img {
-  width: 24px;
-  height: 24px;
+  width: 36px;
+  height: 36px;
   display: block; /* Ensure the icon is treated as a block-level element */
 }
 
@@ -503,15 +505,18 @@ padding: 0px 40px 0px 40px;
 
   nav {
     /* padding: top right bottom left */
-    padding: 60px 0px 0px 20px;
+    padding: 40px 0;
   }
   nav > ul {
-    padding-left: 0px;
-    padding-right: 20px;
+    padding: 0;
+  }
+  nav > ul > li {
+    display: block;
+    margin: 10px 0;
   }
   nav > ul > li > a {
     /* padding: top right bottom left */
-    padding: 8px 12px 10px 12px;
+    padding: 10px
   }
   .flex-container > div {
     width: 25%;
@@ -521,6 +526,71 @@ padding: 0px 40px 0px 40px;
     padding-left: 8px;
     padding-right: 8px;
   }
+  .hero {
+    width: auto;
+    height: auto;
+    /*flexbox stuff*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    /*background styles*/
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(../images/heroimg_flourish.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
+    .hero h1 {
+      font-size: 2em;
+      margin-top: 20px;
+      margin-bottom: 0.5em;
+    }
+    .hero h2 {
+      color:#ffffff;
+      font-size: 18pt;
+      margin-top: 0;
+      margin-bottom: 30px;
+      line-height: 24pt;
+    }
+    .hero .btn {
+      display: block;
+      width: 200px;
+      padding: 20px;
+      margin-top: 30px;
+      margin-bottom: 40px;
+      margin-left: auto;
+      margin-right: auto;
+      color: white;
+      text-decoration: none;
+      font-size: 16pt;
+      border: 2px solid #FF6635;
+      border-radius: 20px;
+      background: linear-gradient(to bottom, #FFA285,#ff6635);
+      font-family: "font family 3";
+    }
+
+
+
+    .featured-title {
+      text-align: Center;
+      font-size: 18pt;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      color: #ff906d;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding-bottom: 40px;
+    }
+    .your-class div p {
+      margin: 20px 0 15px 0;
+      text-align: center;
+      font-size: 12pt;
+      color:#3a6920;
+    }
   video {
     display: none;
   }
@@ -563,45 +633,101 @@ padding: 0px 40px 0px 40px;
   ul {
     padding: 25px;
   }
-  
   ul li {
     color:#3a6920;
     margin: 5px;
     line-height: 40px;
     font-size: 14pt;
   }
+  .footer {
+    background-color: #739462;
+    color: #ffffff;
+    text-align: auto;
+    padding: 10px;
+    width: auto;
+  }
+  .footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: left;
+    flex: 1;
+    align-items: left; /* Add this line */
+  }
+  .footer-menu li {
+    font-size: 14pt;
+    font-family: "Font Family 2"
+  }
+  .social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px; /* Adjust the gap between icons */
+  }
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+    display: flex;
+  }
+
+
+
 }
 
 /********** BEG for dropdown menu in small screen **********/
 @media screen and (max-width: 500px) {
+  header a.logo {
+    width: 100px;
+    height: 44px;
+    padding: 0;
+  }
   nav > ul {
     display: none;
-  }
-  header.food-page {
-    background: #eee url(../images/food-02.jpg) no-repeat center; /* top center bottom - 1/3 of the image full height */
-    background-size: cover;
-    height: 270px;
-  }
-  header.page-3 {
-    /* add you own header here */
-  }
-  header.page-4 {
-    /* add you own header here */
-  }
-  header.page-5 {
-    /* add you own header here */
-  }
-  header.page-6 {
-    /* add you own header here */
   }
   .dropdown {
     display: block;
   }
+
   .flex-container > div {
     width: 50%;
   }
   aside > div > div.scrolling {
     height: 300px;
+  }
+  .footer {
+    background-color: #739462;
+    color: #ffffff;
+    text-align: auto;
+    padding: 10px;
+    width: auto;
+  }
+  .footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: relative;
+    gap: 10px;
+    justify-content: left;
+    flex: 1;
+    align-items: left; /* Add this line */
+  }
+  .footer-menu li {
+    font-size: 10pt;
+    font-family: "Font Family 2"
+  }
+  .social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 5px; /* Adjust the gap between icons */
+  }
+
+  .social-icons img {
+    width: 14px;
+    height: 14px;
+    display: block; /* Ensure the icon is treated as a block-level element */
   }
 }
 /********** END for dropdown menu in small screen **********/
