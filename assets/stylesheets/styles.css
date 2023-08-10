@@ -29,13 +29,7 @@
   font-family: "Font Family 6";
   src: url("../fonts/Raleway-Medium.ttf") format("truetype");
 }
-@font-face {
-  font-family: 'Roboto Medium';
-  src: url(../fonts/Roboto-Medium.ttf') format('woff2'),
-       url('../fonts/Roboto-Regular.ttf') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+
 /* BEG styling headings */
 h1 {
   margin: 0px 0px 20px 0px;
@@ -66,6 +60,7 @@ body {
   font-family: "Font Family 4";
   font-size: 14pt;
   background-color: #fffbf4;
+  line-height: 21pt;
 }
 
 /* BEG styling for logo on top */
@@ -118,8 +113,9 @@ nav ul li a {
   display: inline-block;
   color: #666666;
   text-decoration: none;
-  font-size: 16pt;
-  padding: 10px 20px 15px 20px;
+  font-size: 18pt;
+  padding: 0px 40px 10px 40px;
+  margin-bottom: 20px;
 }
 
 /* styling hover nav item */
@@ -322,8 +318,6 @@ ul li {
   line-height: 75px;
   font-size: 18pt;
 }
-
-
 /* END styling Plants screen */
 
 /* style page banner */
@@ -401,7 +395,81 @@ article > div {
 /* padding: top right bottom left */
 padding: 0px 40px 0px 40px;
 }
-/* end About page styling */
+
+/* styling for About */
+.new-h1 {
+  color:#739462;
+  margin-top: 40px;
+}
+.woman-1 {
+  border-radius: 8px;
+  margin-right: 25px;
+  margin-bottom: 10px;
+}
+.woman-2 {
+  border-radius: 8px;
+  margin-right: 25px;
+  margin-bottom: 10px;
+}
+.our-story {
+  margin-bottom: 10px;
+}
+.our-vision {
+  margin-bottom: 10px;
+}
+/* end styling for About */
+
+/* styling for Gallery */
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 8%;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+.gallery img {
+  width: 100%;
+}
+.gallery-h1 {
+  color: #739462;
+  margin-top: 40px;
+  grid-row: 1;
+  grid-column: 1/-1;
+}
+.img1 {
+  border-radius: 8px;
+}
+.img2 {
+  border-radius: 8px;
+}
+.img3 {
+  border-radius: 8px;
+}
+.img4 {
+  border-radius: 8px;
+}
+.img5 {
+  border-radius: 8px;
+}
+.img6 {
+  border-radius: 8px;
+}
+.img7 {
+  border-radius: 8px;
+}
+.img8 {
+  border-radius: 8px;
+}
+.img9 {
+  border-radius: 8px;
+}
 
 
 /* styling for footer */
@@ -431,8 +499,8 @@ padding: 0px 40px 0px 40px;
 }
 
 .footer-menu li {
-  font-size: 20pt;
-  font-family: "Font Family 2"
+  font-size: 18pt;
+  font-family: "Font Family 4"
 }
 
 .footer-menu a {
@@ -571,8 +639,6 @@ padding: 0px 40px 0px 40px;
       font-family: "font family 3";
     }
 
-
-
     .featured-title {
       text-align: Center;
       font-size: 18pt;
@@ -652,18 +718,20 @@ padding: 0px 40px 0px 40px;
     margin: 0;
     display: flex;
     gap: 20px;
-    justify-content: left;
+    justify-content:flex-start
     flex: 1;
-    align-items: left; /* Add this line */
   }
   .footer-menu li {
     font-size: 14pt;
-    font-family: "Font Family 2"
+    font-family: "Font Family 4"
+    display: flex;
   }
   .social-icons {
     list-style: none;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     gap: 10px; /* Adjust the gap between icons */
   }
   .social-icons img {
@@ -696,6 +764,51 @@ padding: 0px 40px 0px 40px;
   aside > div > div.scrolling {
     height: 300px;
   }
+  .column {
+    float: left;
+    width: 50%;
+    padding: none;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .HalfPgImg {
+    max-width: 100%;
+    max-height: 100%;
+    padding-top: none;
+    padding-right: 100px;
+  }
+  .Plant-h2 {
+    color: #ff906d;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    font-size: 14pt;
+  }
+
+  div.scrolling {
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    border: #739462 solid 1px;
+    overflow: auto;
+    /* auto - similar to scroll, but it adds scrollbars only when necessary */
+    /* overflow is shortcut for overflow-y and overflow-x */
+    /* https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_overflow-x */
+    /* https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp */
+  }
+  ul {
+    padding: 25px;
+  }
+  ul li {
+    color:#3a6920;
+    margin: 5px;
+    line-height: 24px;
+    font-size: 12pt;
+  }
   .footer {
     background-color: #739462;
     color: #ffffff;
@@ -707,27 +820,29 @@ padding: 0px 40px 0px 40px;
     list-style: none;
     padding: 0;
     margin: 0;
-    display: relative;
+    display: flex;
     gap: 10px;
-    justify-content: left;
+    flex-wrap: wrap;
+    flex-direction: column;
     flex: 1;
-    align-items: left; /* Add this line */
   }
   .footer-menu li {
     font-size: 10pt;
-    font-family: "Font Family 2"
+    font-family: "Font Family 4"
   }
   .social-icons {
     list-style: none;
     padding: 0;
     display: flex;
     gap: 5px; /* Adjust the gap between icons */
+    flex-wrap: wrap;
+    flex-direction: column;
   }
 
   .social-icons img {
     width: 14px;
     height: 14px;
-    display: block; /* Ensure the icon is treated as a block-level element */
+    display: flex;
   }
 }
 /********** END for dropdown menu in small screen **********/
