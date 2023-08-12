@@ -47,15 +47,124 @@
     </nav>
   </header>
   <article>
+    <!-- sortable table -->
     <div>
-      <!-- TODO: add main content here -->
-      <h1>Page 4</h1>
+      <h1 class="new-h1">Plant Care Basics</h1>
+      <p>
+        Something about indoor plant care basics
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+        Officiis impedit nisi at inventore nihil sint doloremque 
+        dolorum ratione magni pariatur explicabo quasi soluta earum aspernatur corporis in, 
+        voluptate laudantium nam.  
+      </p>
+      <table id="your-table-items">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Care Difficulty</th>
+            <th>Light</th>
+            <th>Water</th>
+            <th>Temperature</th>
+            <th>Food</th>
+            <th>Toxicity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alocasia Polly</td>
+            <td>Moderate</td>
+            <td>Bright indirect filtered light</td>
+            <td>Water When 25-50% of the soil volume is dry. About once a week</td>
+            <td>Prefers Temps between 65°-85°F with high humidity</td>
+            <td>Fertilize every month during spring and summer</td>
+            <td>Mildy toxic to humans and pets if ingested</td>
+          </tr>
+          <tr>
+            <td>Bird's Nest Fern</td>
+            <td>Easy</td>
+            <td>Medium to Bright Indirect Light</td>
+            <td>Water every 1-2 weeks. Allow soil to fry out half way down between waterings.</td>
+            <td>Thrive in temps between 60°- 80°F. Benefits from extra humidity</td>
+            <td>Fertilize once a month during Growing season</td>
+            <td>Pet Friendly</td>
+          </tr>
+          <tr>
+            <td>Calathea Rattlesnake</td>
+            <td>Moderate</td>
+            <td>Bright Indirect Light</td>
+            <td>Water every 1 - 2 weeks, allowing soil to dry out half way down between waterings</td>
+            <td>Thrives in warm temperatures, between 65°-85°F. Provide ample humidity.</td>
+            <td>Fertilize once a month during spring and summer</td>
+            <td>Pet Friendly. Non-toxic</td>
+          </tr>
+          <tr>
+            <td>Dracaena Lemon Lime</td>
+            <td>Easy</td>
+            <td>Medium Indirect Light</td>
+            <td>Every 1 - 2 weeks, allowing soil to dry out between waterings.</td>
+            <td>Prefers temps between 60°-75°F</td>
+            <td>Fertilize once a month in spring and summer</td>
+            <td>Not toxic to humans. Moderately toxic to pets.</td>
+          </tr>
+          <tr>
+            <td>Fiddle Leaf Fig</td>
+            <td>Moderate to difficult</td>
+            <td>Bright indirect light to full sun</td>
+            <td>Every 1 - 2 weeks, allowing soil to dry out between waterings</td>
+            <td>Room tempertures of 60°-80°F</td>
+            <td>Fertilize once in the spring. Monthly during the summer.</td>
+            <td>Toxic to human and pets if ingested</td>
+          </tr>
+          <tr>
+            <td>Golden Pothos</td>
+            <td>Easy</td>
+            <td>Low to bright indirect light</td>
+            <td>Water every 1-2 weeks, allowing soil to dry out between waterings./td>
+            <td>Prefers temps between 65°-85°F</td>
+            <td>Fertilize once a month in spring and summer</td>
+            <td>Toxic to humans and pets if ingested</td>
+          </tr>
+          <tr>
+            <td>Monstera Deliciosa</td>
+            <td>Easy</td>
+            <td>Bright indirect to medium light</td>
+            <td>Water every 1-2 weeks, allowing soil to dry out between waterings./td>
+            <td>Prefers temps between 60°-80°F</td>
+            <td>Fertilize once a month in spring and summer</td>
+            <td>Mildly toxic to humans and pets if ingested</td>
+          </tr>
+          <tr>
+            <td>Philodendron Heartleaf</td>
+            <td>Easy</td>
+            <td>Medium to bright indirect light</td>
+            <td>Water every 1-2 weeks, allowing soil to dry out between waterings.</td>
+            <td>Prefers temps between 65°-85°F</td>
+            <td>Fertilize once a month in spring and summer</td>
+            <td>Toxic to humans and pets if ingested</td>
+          </tr>
+          <tr>
+            <td>Snake Plant</td>
+            <td>Easy</td>
+            <td>Low to bright indirect light</td>
+            <td>Water only when soil is dry</td>
+            <td>Prefers a dry environment with temps 55°-85°F</td>
+            <td>Fertilize once every 6 months</td>
+            <td>Toxic to humans and pets if ingested</td>
+          </tr>
+          <tr>
+            <td>Stromanthe</td>
+            <td>Moderate</td>
+            <td>Medium to bright indirect light</td>
+            <td>Every 1-2 weeks, allowing soil to dry out halfway between waterings</td>
+            <td>Prefers temps between 65°-80°F, with ample humidity</td>
+            <td>Fertilize once a month in spring and summer</td>
+            <td>Pet friendly. Non-toxic.</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </article>
-  <section style="padding: 40px">
-    <!-- TODO: add sidebar content here -->
-    <h3>Your Title</h3>
-  </section>
+
   <div class="to-top"><a href="#">Top</a></div>
   <footer class="footer">
     <div class="footer-content">
@@ -73,6 +182,23 @@
       </ul>    
     </div>
   </footer>
+
+  <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/JavaScript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"></script>
+  <!-- BEG JavaScript -->
+  <script>
+    $(document).ready(function () {
+      $("table#your-table-items").tablesorter({
+        sortList: [[2, 0]],
+        CssAsc: "tablesorter-headerAsc",
+        CssDesc: "tablesorter-headerDesc"
+      });
+    });
+  </script>
+
+
+
 </body>
 
 </html>
