@@ -40,7 +40,7 @@ h1 {
 }
 
 h2 {
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 10px 0px;
   color: #ff906d;
   font-size: 20pt;
   font-family: "font family 6";
@@ -114,6 +114,7 @@ nav ul li a {
   color: #666666;
   text-decoration: none;
   font-size: 18pt;
+  font-family: "font family 2";
   padding: 0px 40px 10px 40px;
   margin-bottom: 20px;
 }
@@ -207,13 +208,13 @@ background-repeat: no-repeat;
 background-attachment: fixed;
 }
 .hero h1 {
-  font-size: 5em;
+  font-size: 4em;
   margin-top: 0;
   margin-bottom: 0.5em;
 }
 .hero h2 {
   color:#ffffff;
-  font-size: 30pt;
+  font-size: 28pt;
   margin-top: 0;
   margin-bottom: 50px;
   line-height: 42pt;
@@ -221,7 +222,7 @@ background-attachment: fixed;
 .hero .btn {
   display: block;
   width: 300px;
-  padding: 1em;
+  padding: 30px;
   margin-top: 80px;
   margin-left: auto;
   margin-right: auto;
@@ -288,35 +289,36 @@ background-attachment: fixed;
   clear: both;
 }
 .HalfPgImg {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 100vw;
+  max-height: 100vh;
   padding-top: none;
-  padding-right: 100px;
+  padding-bottom: none;
 }
-.Plant-h2 {
-  color: #ff906d;
+.Plant-list {
   margin-top: 40px;
-  margin-bottom: 50px;
-  font-size: 36pt;
 }
-
+.AtoZ-h1 {
+  color:#739462;
+  font-size: 30pt;
+  margin-bottom: 40px;
+}
 div.scrolling {
   width: 500px;
-  height: 550px;
-  padding: 20px;
-  border: #739462 solid 1px;
+  height: 625px;
+  padding-left: 50px;
+  border: #FFA285 solid 1px;
+  border-radius: 8px;
   overflow: auto;
 }
 
 ul {
-  padding: 25px;
+padding-top: 10px;
 }
 
 ul li {
   color:#3a6920;
-  margin: 5px;
-  line-height: 75px;
   font-size: 18pt;
+  line-height: 70pt;
 }
 /* END styling Plants screen */
 
@@ -334,21 +336,73 @@ padding: 0px 40px 0px 40px;
 }
 
 /* styling for Care page */
+.column {
+  float: left;
+  width: 50%;
+  padding: none;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.plant-imagebox {
+  float: right;
+  justify-content: right;
+  align-items: right;
+  margin-top: 20px; 
+  margin-bottom: 10px;
+}
+.care-img-container img{
+  height: 600px;
+}
+.care-img-container {
+  float: right;
+  padding: 10px;
+}
+.plant-care-small-img img {
+  height: 112px;
+  margin: 10px 0;
+  cursor: pointer;
+  display: block;
+  opacity: .6;
+  padding-right: 40px;
+}
+.plant-care-small-img img:hover {
+  opacity: 3;
+}
+.plant-care-small-img {
+  float: right;
+}
+
+.care-text {
+  justify-content: left;
+  margin-left: 40px;
+  margin-top: 40px;
+}
+.basic-care {
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-bottom: 100px;
+}
+
+
 table#your-table-items {
   border-collapse: collapse;
   /* in inspector mode - easier to see the difference between collapse and no collapse */
   border: 1px solid rgba(154, 154, 154, 0.75);
   text-align: center;
+  margin-bottom: 40px;
 }
 
 table#your-table-items th:nth-child(1),
 table#your-table-items td:nth-child(1) {
-  width: 20%;
+  width: 12%;
 }
 
 table#your-table-items th:nth-child(2),
 table#your-table-items td:nth-child(2) {
-  width: 15%;
+  width: 10%;
 }
 
 table#your-table-items th:nth-child(3),
@@ -358,19 +412,19 @@ table#your-table-items td:nth-child(3) {
 
 table#your-table-items th:nth-child(4),
 table#your-table-items td:nth-child(4) {
-  width: 20%;
+  width: 15%;
 }
 table#your-table-items th:nth-child(5),
 table#your-table-items td:nth-child(5) {
-  width: 20%;
+  width: 15%;
 }
 table#your-table-items th:nth-child(6),
 table#your-table-items td:nth-child(6) {
-  width: 20%;
+  width: 15%;
 }
 table#your-table-items th:nth-child(7),
 table#your-table-items td:nth-child(7) {
-  width: 20%;
+  width: 15%;
 }
 
 table#your-table-items thead {
@@ -382,6 +436,7 @@ table#your-table-items thead th {
   color: #fff;
   background-color:#739462;
   padding: 8px;
+  text-align: center;
 }
 
 table#your-table-items thead th:hover {
@@ -396,14 +451,17 @@ table#your-table-items thead th.tablesorter-headerDesc {
 }
 
 table#your-table-items tbody {
-  font-size: 0.9em;
-  line-height: 15px;
+  font-size: 11pt;
+  line-height: 15pt;
 }
 
 /*** make sure table#your-table-items tbody tr:nth-child(even) defined before table#your-table-items tbody tr:hover */
 /*** otherwise, it would need to define table#your-table-items tbody tr:nth-child(even):hover*/
 table#your-table-items tbody tr:nth-child(even) {
-  background: #73946220
+  background: #73946220;
+}
+table#your-table-items tbody tr:nth-child(odd) {
+  background: #ffffff;
 }
 
 table#your-table-items tbody tr:hover {
@@ -412,16 +470,11 @@ table#your-table-items tbody tr:hover {
 }
 
 table#your-table-items tbody td {
-  padding: 8px 20px;
+  padding: 8px 8px;
   border-top: 1px solid rgba(154, 154, 154, 0.75);
   border-right: 1px solid rgba(154, 154, 154, 0.75);
 }
 
-table#your-table-items tbody td img {
-  width: 100px;
-  margin: 0 10px 0 0;
-  border: 1px solid rgba(154, 154, 154, 0.75);
-}
 
 /* end styling for Care page */
 
@@ -431,7 +484,7 @@ table#your-table-items tbody td img {
 /* styling for About page */
 .new-h1 {
   color:#739462;
-  margin-top: 40px;
+  font-size: 30pt;
 }
 .woman-1 {
   border-radius: 8px;
@@ -473,6 +526,7 @@ table#your-table-items tbody td img {
   margin-top: 40px;
   grid-row: 1;
   grid-column: 1/-1;
+  font-size: 36pt;
 }
 .img1 {
   border-radius: 8px;
@@ -705,8 +759,8 @@ table#your-table-items tbody td img {
     clear: both;
   }
   .HalfPgImg {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: auto;
+    max-height: auto;
     padding-top: none;
     padding-right: 100px;
   }
@@ -737,6 +791,36 @@ table#your-table-items tbody td img {
     line-height: 40px;
     font-size: 14pt;
   }
+  .plant-imagebox {
+    float: right;
+    justify-content: right;
+    align-items: right;
+    margin-top: 20px; 
+    margin-bottom: 10px;
+  }
+  .plant-care-small-img img {
+    height: 72px;
+    margin: 5px 0;
+    cursor: pointer;
+    display: block;
+    opacity: .6;
+    padding-right: 40px;
+  }
+
+  .plant-care-small-img {
+    float: right;
+  }
+  .care-img-container img{
+    height: 400px;
+  }
+  .care-img-container {
+    float:right;
+    padding: 10px;
+  }
+
+
+
+
   .footer {
     background-color: #739462;
     color: #ffffff;
@@ -789,7 +873,6 @@ table#your-table-items tbody td img {
   .dropdown {
     display: block;
   }
-
 
   .flex-container > div {
     width: 50%;
@@ -844,7 +927,7 @@ table#your-table-items tbody td img {
   }
   .column {
     float: left;
-    width: 50%;
+    width: 35%;
     padding: none;
   }
   
@@ -853,10 +936,11 @@ table#your-table-items tbody td img {
     content: "";
     display: table;
     clear: both;
+    flex-wrap: wrap;
   }
   .HalfPgImg {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: auto;
+    max-height: auto;
     padding-top: none;
     padding-right: 100px;
   }

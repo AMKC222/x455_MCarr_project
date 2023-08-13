@@ -5,6 +5,8 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
   <link rel="stylesheet" type="text/css" href="./assets/stylesheets/styles.css" />
   <title>Care</title>
 </head>
@@ -46,10 +48,65 @@
       </div>
     </nav>
   </header>
+  <Main>
+
+<!-- image gallery -->
+<div class="row">
+  <div class="column">
+    <div class="care-text">
+      <h1 class="new-h1">Indoor Plant Care 101</h1>    
+    <p>Dive into the world of successful indoor plant care with our best tips for mastering the skills needed to nurture vibrant and thriving houseplants! <br>
+
+      Whether you're a novice enthusiast or an experienced gardener, grasping the fundamental principles of caring for houseplants is the key to
+      cultivating a lush and inviting indoor haven. Explore the core aspects of tending to your leafy companions, and gain new insights and techniques that will ensure your plants will not only endure, but thrive. 
+      From understanding light and watering requirements to managing humidity levels and perfecting the art of pruning, our expert-approved tips will
+      empower you to curate a stunning collection of plants that infuse serenity and vitality into your living spaces.
+    </p>
+    </div>
+</div>
+
+  <div class="column">
+    <div class="plant-imagebox">
+  <div class="plant-care-small-img">
+    <img src="assets/images/plant1.jpg" onclick="myFunction(this)">
+    <img src="assets/images/plant2.jpg" onclick="myFunction(this)">
+    <img src="assets/images/plant3.jpg" onclick="myFunction(this)">
+    <img src="assets/images/plant4.jpg" onclick="myFunction(this)">
+    <img src="assets/images/plant5.jpg" onclick="myFunction(this)">
+  </div>
+  <div class="care-img-container">
+    <img id="imagebox" src="assets/images/plant1.jpg">
+  </div>
+</div>
+</div>
+</div>
+
+<section>
+  <div class="basic-care">
+  <h1 class="new-h1">Quick Tips</h1>
+  <h2>Lighting</h2>
+    <p>Proper lighting is crucial for indoor plants. Different plants have varying light requirements, so it's important to understand your plant's needs. Generally, place high-light plants closer to windows with ample sunlight, while low-light plants can thrive in shady spots. Rotate your plants periodically to ensure even growth as they reach for the light.</p>
+    <br>
+    <h2>Watering</h2>
+    <p>Overwatering is a common pitfall. Be sure to water your plants appropriately, considering factors like plant type, pot size, and environmental conditions. Allow the top inch of soil to dry before watering again. Using pots with drainage holes can help prevent waterlogging. Remember, it's better to under water slightly than to drown your plants.</p>
+    <br>
+    <h2>Humidity</h2>
+    <p>Indoor environments can sometimes be dry, especially in heated or air-conditioned spaces. Some plants, such as tropical varieties, thrive in higher humidity. You can increase humidity by misting your plants, placing them on trays filled with water and pebbles, or using a room humidifier.</p>
+    <br>
+    <h2>Potting & Soil</h2>
+    <p>Choosing the right potting mix is essential. Use well-draining soil appropriate for your plant type. Repot your plants when they outgrow their containers, providing them with fresh nutrients and space for growth.</p>
+    <br>
+    <h2>Fertilizing</h2>
+    <p>Indoor plants benefit from occasional fertilizing during their active growing seasons (usually spring and summer). Use a balanced, water-soluble fertilizer and follow the instructions on the packaging. Avoid over-fertilizing, as this can harm the plant.</p>
+    <br>
+    <h2>Pruning & Grooming</h2>
+    <p>Regularly prune your plants to remove dead or yellowing leaves, encourage bushier growth, and maintain their overall shape. Grooming also helps improve airflow around the plant, reducing the risk of pests and diseases.</p>
+  </div>
+  </section>
   <article>
     <!-- sortable table -->
-    <div>
-      <h1 class="new-h1">Plant Care Basics</h1>
+    <div class="plant-table">
+      <h1 class="new-h1">Compare our top 10 trending house plants</h1>
       <p>
         Something about indoor plant care basics
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
@@ -64,7 +121,6 @@
             <th>Care Difficulty</th>
             <th>Light</th>
             <th>Water</th>
-            <th>Temperature</th>
             <th>Food</th>
             <th>Toxicity</th>
           </tr>
@@ -75,7 +131,6 @@
             <td>Moderate</td>
             <td>Bright indirect filtered light</td>
             <td>Water When 25-50% of the soil volume is dry. About once a week</td>
-            <td>Prefers Temps between 65°-85°F with high humidity</td>
             <td>Fertilize every month during spring and summer</td>
             <td>Mildy toxic to humans and pets if ingested</td>
           </tr>
@@ -84,7 +139,6 @@
             <td>Easy</td>
             <td>Medium to Bright Indirect Light</td>
             <td>Water every 1-2 weeks. Allow soil to fry out half way down between waterings.</td>
-            <td>Thrive in temps between 60°- 80°F. Benefits from extra humidity</td>
             <td>Fertilize once a month during Growing season</td>
             <td>Pet Friendly</td>
           </tr>
@@ -93,7 +147,6 @@
             <td>Moderate</td>
             <td>Bright Indirect Light</td>
             <td>Water every 1 - 2 weeks, allowing soil to dry out half way down between waterings</td>
-            <td>Thrives in warm temperatures, between 65°-85°F. Provide ample humidity.</td>
             <td>Fertilize once a month during spring and summer</td>
             <td>Pet Friendly. Non-toxic</td>
           </tr>
@@ -102,7 +155,6 @@
             <td>Easy</td>
             <td>Medium Indirect Light</td>
             <td>Every 1 - 2 weeks, allowing soil to dry out between waterings.</td>
-            <td>Prefers temps between 60°-75°F</td>
             <td>Fertilize once a month in spring and summer</td>
             <td>Not toxic to humans. Moderately toxic to pets.</td>
           </tr>
@@ -111,7 +163,6 @@
             <td>Moderate to difficult</td>
             <td>Bright indirect light to full sun</td>
             <td>Every 1 - 2 weeks, allowing soil to dry out between waterings</td>
-            <td>Room tempertures of 60°-80°F</td>
             <td>Fertilize once in the spring. Monthly during the summer.</td>
             <td>Toxic to human and pets if ingested</td>
           </tr>
@@ -119,8 +170,7 @@
             <td>Golden Pothos</td>
             <td>Easy</td>
             <td>Low to bright indirect light</td>
-            <td>Water every 1-2 weeks, allowing soil to dry out between waterings./td>
-            <td>Prefers temps between 65°-85°F</td>
+            <td>Water every 1-2 weeks, allowing soil to dry out between waterings.</td>
             <td>Fertilize once a month in spring and summer</td>
             <td>Toxic to humans and pets if ingested</td>
           </tr>
@@ -128,8 +178,7 @@
             <td>Monstera Deliciosa</td>
             <td>Easy</td>
             <td>Bright indirect to medium light</td>
-            <td>Water every 1-2 weeks, allowing soil to dry out between waterings./td>
-            <td>Prefers temps between 60°-80°F</td>
+            <td>Water every 1-2 weeks, allowing soil to dry out between waterings.</td>
             <td>Fertilize once a month in spring and summer</td>
             <td>Mildly toxic to humans and pets if ingested</td>
           </tr>
@@ -138,7 +187,6 @@
             <td>Easy</td>
             <td>Medium to bright indirect light</td>
             <td>Water every 1-2 weeks, allowing soil to dry out between waterings.</td>
-            <td>Prefers temps between 65°-85°F</td>
             <td>Fertilize once a month in spring and summer</td>
             <td>Toxic to humans and pets if ingested</td>
           </tr>
@@ -147,7 +195,6 @@
             <td>Easy</td>
             <td>Low to bright indirect light</td>
             <td>Water only when soil is dry</td>
-            <td>Prefers a dry environment with temps 55°-85°F</td>
             <td>Fertilize once every 6 months</td>
             <td>Toxic to humans and pets if ingested</td>
           </tr>
@@ -156,7 +203,6 @@
             <td>Moderate</td>
             <td>Medium to bright indirect light</td>
             <td>Every 1-2 weeks, allowing soil to dry out halfway between waterings</td>
-            <td>Prefers temps between 65°-80°F, with ample humidity</td>
             <td>Fertilize once a month in spring and summer</td>
             <td>Pet friendly. Non-toxic.</td>
           </tr>
@@ -164,6 +210,7 @@
       </table>
     </div>
   </article>
+</Main>
 
   <div class="to-top"><a href="#">Top</a></div>
   <footer class="footer">
@@ -188,6 +235,12 @@
     src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"></script>
   <!-- BEG JavaScript -->
   <script>
+    function myFunction(smallImg)
+    { 
+      var fullImg = document.getElementById("imagebox")
+      fullImg.src = smallImg.src;
+    }
+
     $(document).ready(function () {
       $("table#your-table-items").tablesorter({
         sortList: [[2, 0]],
