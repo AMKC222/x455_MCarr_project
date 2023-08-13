@@ -46,17 +46,85 @@
       </div>
     </nav>
   </header>
-  <!--<article style="width: 70%; float: left;">-->
+
+
+
+
   <article>
+    <h1 class="new-h1">Houseplant Guides & Tutorials</h1>
+    <div class="guides">
+      <h2>Indoor plant Care 101: Basic Tips & Tricks</h2>
+      <p>
+        Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque,
+        id pulvinar odio lorem non turpis. Nullam sit amet enim. Lorem ipsum
+        dolor sit amet, consect etuer adipiscing elit. Orci magna rhoncus
+        neque, id pulvinar odio lorem non turpis.
+      </p>
+      <div class="panel">
+        <span style="width: 500px; word-wrap: break-word;">
+          <h3>Plant Care 101</h3>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/-5HpHhXEgZw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </span>
+      </div>
+      <div class="accordion" style="text-align: right;">More</div>
+    </div>
     <div>
-      <!-- TODO: add main content here -->
-      <h1>Page 3</h1>
+      <h2>Fertilizing Indoor Plants: A Beginners Guide</h2>
+      <p>
+        Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque,
+        id pulvinar odio lorem non turpis. Nullam sit amet enim. Lorem ipsum
+        dolor sit amet, consect etuer adipiscing elit. Orci magna rhoncus
+        neque, id pulvinar odio lorem non turpis.
+      </p>
+      <div class="panel">
+        <span style="width: 500px; word-wrap: break-word;">
+          <h3>How to Fertilize Indoor Plants</h3>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/vMDC5sdpHL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </span>
+      </div>
+      <div class="accordion" style="text-align: right;">More</div>
+    </div>
+    <div>
+      <h2>10 Simple Houseplant Tools</h2>
+      <p>
+        Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque,
+        id pulvinar odio lorem non turpis. Nullam sit amet enim. Lorem ipsum
+        dolor sit amet, consect etuer adipiscing elit. Orci magna rhoncus
+        neque, id pulvinar odio lorem non turpis.
+      </p>
+      <div class="panel">
+        <span style="width: 500px; word-wrap: break-word;">
+          <h3>Simple tools for your plants</h3>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/q1Vp6VcEwGY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </span>
+      </div>
+      <div class="accordion" style="text-align: right;">More</div>
+    </div>
+    <div>
+      <h2>9 Telltale Signs You're Overwatering Your Plants</h2>
+      <p>
+        Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque,
+        id pulvinar odio lorem non turpis. Nullam sit amet enim. Lorem ipsum
+        dolor sit amet, consect etuer adipiscing elit. Orci magna rhoncus
+        neque, id pulvinar odio lorem non turpis.
+      </p>
+      <div class="panel">
+        <span style="width: 500px; word-wrap: break-word;">
+          <h3>Are you overwatering your plants?</h3>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Uwf-EKaq4cw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </span>
+      </div>
+      <div class="accordion" style="text-align: right;">More</div>
     </div>
   </article>
-  <!--<section style="width: 30%; float: left; padding: 40px">-->
-  <section style="padding: 40px">
-    <!-- TODO: add sidebar content here -->
-    <h3>Your Title</h3>
+
+
+
+
+
+
+
+
   </section>
   <div class="to-top"><a href="#">Top</a></div>
   <footer class="footer">
@@ -64,7 +132,7 @@
       <ul class="footer-menu">
         <li><a href="#home">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Resources</a></li>
+        <li><a href="page-7.html">Resources</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
       <ul class="social-icons">
@@ -76,5 +144,23 @@
     </div>
   </footer>
 </body>
-
+<!-- BEG JavaScript -->
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var panel = this.previousElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+        this.innerHTML = "More";
+      } else {
+        panel.style.display = "block";
+        this.innerHTML = "Less";
+      }
+    });
+  }
+</script>
+<!-- END JavaScript -->
 </html>
