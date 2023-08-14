@@ -765,17 +765,6 @@ margin-right: 20px;
     float: none;
     margin-bottom: 40px;
   }
-  article > div {
-    margin: 0px 40px;
-    /* padding: top right bottom left */
-    padding: 0px 0px 30px 0px;
-    border-right: none;
-    border-bottom: 1px solid #555;
-  }
-  aside {
-    width: 100%;
-    float: none;
-  }
 
   nav {
     /* padding: top right bottom left */
@@ -959,7 +948,61 @@ margin-right: 20px;
     float: left;
     flex-wrap: wrap;
   }
-
+  table#your-table-items {
+    border-collapse: collapse;
+    /* in inspector mode - easier to see the difference between collapse and no collapse */
+    border: 1px solid rgba(154, 154, 154, 0.75);
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  
+  table#your-table-items th:nth-child(1),
+  table#your-table-items td:nth-child(1) {
+    width: 12%;
+  }
+  
+  table#your-table-items th:nth-child(2),
+  table#your-table-items td:nth-child(2) {
+    width: 10%;
+  }
+  
+  table#your-table-items th:nth-child(3),
+  table#your-table-items td:nth-child(3) {
+    width: 15%;
+  }
+  
+  table#your-table-items th:nth-child(4),
+  table#your-table-items td:nth-child(4) {
+    width: 15%;
+  }
+  table#your-table-items th:nth-child(5),
+  table#your-table-items td:nth-child(5) {
+    width: 15%;
+  }
+  table#your-table-items th:nth-child(6),
+  table#your-table-items td:nth-child(6) {
+    width: 15%;
+  }
+  table#your-table-items th:nth-child(7),
+  table#your-table-items td:nth-child(7) {
+    width: 15%;
+  }
+  table#your-table-items thead {
+    font-size: 10pt;
+    text-transform: uppercase;
+  }
+  
+  table#your-table-items thead th {
+    color: #fff;
+    background-color:#739462;
+    padding: 8px;
+    text-align: center;
+  }
+  table#your-table-items tbody {
+    font-size: 10pt;
+    line-height: 14pt;
+  }
   .footer {
     background-color: #739462;
     color: #ffffff;
@@ -1131,6 +1174,63 @@ margin-right: 20px;
     float: left;
     flex-wrap: wrap;
     flex-direction: row;
+  }
+
+  table#your-table-items {
+    border-collapse: collapse;
+    /* in inspector mode - easier to see the difference between collapse and no collapse */
+    border: 1px solid rgba(154, 154, 154, 0.75);
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  
+  table#your-table-items th:nth-child(1),
+  table#your-table-items td:nth-child(1) {
+    width: 10%;
+  }
+  
+  table#your-table-items th:nth-child(2),
+  table#your-table-items td:nth-child(2) {
+    width: 8%;
+  }
+  
+  table#your-table-items th:nth-child(3),
+  table#your-table-items td:nth-child(3) {
+    width: 15%;
+  }
+  
+  table#your-table-items th:nth-child(4),
+  table#your-table-items td:nth-child(4) {
+    width: 15%;
+  }
+  table#your-table-items th:nth-child(5),
+  table#your-table-items td:nth-child(5) {
+    width: 15%;
+  }
+  table#your-table-items th:nth-child(6),
+  table#your-table-items td:nth-child(6) {
+    width: 15%;
+  }
+  table#your-table-items th:nth-child(7),
+  table#your-table-items td:nth-child(7) {
+    width: 15%;
+  }
+  table#your-table-items thead {
+    font-size: 8pt;
+    text-transform: uppercase;
+  }
+  
+  table#your-table-items thead th {
+    color: #fff;
+    background-color:#739462;
+    padding: 8px;
+    text-align: center;
+  }
+  table#your-table-items tbody {
+    font-size: 9pt;
+    line-height: 12pt;
+    word-break: break-all;
   }
   .woman-2 {
     float: left;
