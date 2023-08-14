@@ -90,7 +90,7 @@ header a.logo {
   background: url(../images/flourish\ logo\ \(1\).png) no-repeat 0 0;
   background-size: contain;
   z-index: 1;
-  top: 40px;
+  top: 35px;
   left: 30px;
 }
 header a.logo span {
@@ -102,7 +102,7 @@ header a.logo:hover {
 }
 nav {
   background-color: #ffffff;
-  padding: 45px 0px 0px 180px;
+  padding: 20px 0px 0px 175px;
 }
 
 /* END styling for logo on top */
@@ -133,7 +133,7 @@ nav ul li a {
   font-size: 18pt;
   font-family: "font family 2";
   padding: 0px 40px 10px 40px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 /* styling hover nav item */
