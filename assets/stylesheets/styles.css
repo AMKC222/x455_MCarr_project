@@ -682,7 +682,7 @@ margin-right: 20px;
   background-color: #739462;
   color: #ffffff;
   text-align: center;
-  padding: 20px;
+  padding: 0;
   width: auto;
 }
 
@@ -721,7 +721,7 @@ margin-right: 20px;
 
 .social-icons {
   list-style: none;
-  padding: 0;
+  padding-top: 18px;
   display: flex;
   gap: 10px; /* Adjust the gap between icons */
   justify-content: flex-end; /* Align icons to the right */
