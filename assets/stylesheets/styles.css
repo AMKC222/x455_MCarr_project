@@ -344,7 +344,7 @@ ul li {
 
 /* styling for Guide page */
 .header-image {
-  background-image: url("/assets/images/greenleaves.jpg");
+  background-image: url(../images/greenleaves.jpg);
   height: 350px;
   background-position: center;
   border: 1px solid #3a6920;
