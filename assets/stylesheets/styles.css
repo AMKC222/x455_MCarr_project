@@ -46,11 +46,24 @@ h2 {
   font-family: "font family 6";
 }
 h3 {
-  margin: 0px 0px 20px 0px;
+  margin: 30px 0px 10px 0px;
   color: #739462;
-  font-size: 16pt;
-  font-weight: normal;
+  font-size: 18pt;
+  font-family: font family 2;
 }
+h4 {
+  color: #292929;
+  font-size: 16pt;
+  line-height: 20pt;
+  font-family: "font family 2";
+}
+h5 {
+  margin: 0px 0px 10px 0px;
+  color: #292929;
+  font-size: 14pt;
+  font-family: "font family 2";
+}
+
 /* END styling headings */
 
 body {
@@ -59,6 +72,12 @@ body {
   font-size: 14pt;
   background-color: #fffbf4;
   line-height: 21pt;
+  color: #292929;
+}
+/* Styling anchor link (hyperlink) */
+a {
+  color: #2455f5;
+  text-decoration: underline;
 }
 
 /* BEG styling for logo on top */
@@ -277,17 +296,15 @@ background-attachment: fixed;
 .column {
   float: left;
   width: 50%;
-  padding: none;
+  padding-right: 10px;
 }
-
-/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
 .HalfPgImg {
-  max-width: 100vw;
+  max-width: 50vw;
   max-height: 100vh;
   padding-top: none;
   padding-bottom: none;
@@ -298,13 +315,14 @@ background-attachment: fixed;
 .AtoZ-h1 {
   color:#739462;
   font-size: 30pt;
-  margin-bottom: 40px;
-  margin-top: none;
+  margin-bottom: 20px;
+  margin-top: 40px;
 }
 div.scrolling {
   width: 500px;
-  height: 600px;
-  padding-left: 50px;
+  height: 400px;
+  margin-top: 50px;
+  padding-left: 30px;
   border: #FFA285 solid 1px;
   border-radius: 8px;
   overflow: auto;
@@ -318,21 +336,31 @@ ul li {
   color:#3a6920;
   font-size: 18pt;
   line-height: 70pt;
+  padding: 10px;
+  text-decoration: underline;
 }
 /* END styling Plants screen */
 
 
-/* Styling anchor link (hyperlink) */
-a {
-  color: #2455f5;
-  text-decoration: none;
+/* styling for Guide page */
+.header-image {
+  background-image: url("/assets/images/greenleaves.jpg");
+  height: 350px;
+  background-position: center;
+  border: 1px solid #3a6920;
+}
+.guide-h1 {
+  color:#739462;
+  font-size: 30pt;
+  padding-top: 40px;
 }
 
-
-/* styling for Guide page */
 article {
   width: auto;
-  padding: 25px 75px;
+  padding-top: 20px;
+  padding-left: 75px;
+  padding-right: 75px;
+  padding-bottom: 20px;
 }
 
 .guides {
@@ -356,56 +384,93 @@ article {
   overflow: hidden;
 }
 
+.flex-guides {
+  display: flex;
+  margin-bottom: 40px;
+}
+.flex-child1 {
+  flex: 1;
+}
+
+.flex-child2 {
+margin-right: 30px;
+
+}
+ul li.a {
+  color:#292929;
+  font-size: 12pt;
+  line-height: 30pt;
+  list-style: none;
+}
+
 /* styling for Guides page */
 
 /* styling for Care page */
 
-.column {
-  float: left;
-  width: 50%;
-  padding: none;
+.flex-care {
+  display: flex;
 }
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.flex-child3 {
+  flex: 1;
 }
-.plant-imagebox {
-  float: right;
-  justify-content: right;
-  align-items: right;
+.flex-child4 {
+margin-left: 50px;
+margin-top: 30px;
+display: grid;
 }
+
 .care-img-container img{
-  height: 600px;
+  height: 500px;
+  padding-bottom: 5px;
 }
 .care-img-container {
   float: right;
-  padding: 10px;
+  padding: 0 15px 0 0;
+  grid-row: 1;
 }
 .plant-care-small-img img {
-  height: 112px;
-  margin: 10px 0;
+  width: 80px;
+  margin: 0 0 10px 0;
   cursor: pointer;
-  display: block;
+  display: inline-block;
   opacity: .6;
 }
 .plant-care-small-img img:hover {
   opacity: 3;
 }
 .plant-care-small-img {
-  float: right;
+padding-top: 10px;
+grid-row: 2;
 }
 
 .care-text {
   justify-content: left;
-  
+}
+.care-btn {
+  display: block;
+  float: left;
+  width: 175px;
+  padding: 10px;
+  padding-left: 22px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  text-decoration: none;
+  font-size: 14pt;
+  border: 1px solid #FF6635;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, #FFA285,#ff6635);
+  font-family: "font family 3";
+}
+.care-btn:hover {
+  color: #292929;
+  text-decoration: none;
+
 }
 .quick-tips {
-  margin-top: 20px;
-  margin-left: 60px;
   justify-content: left;
   align-content: left;
-  margin-bottom: 100px;
 }
 
 
@@ -415,6 +480,7 @@ table#your-table-items {
   border: 1px solid rgba(154, 154, 154, 0.75);
   text-align: center;
   margin-bottom: 40px;
+  margin-top: 40px;
 }
 
 table#your-table-items th:nth-child(1),
@@ -507,6 +573,8 @@ table#your-table-items tbody td {
 .new-h1 {
   color:#739462;
   font-size: 30pt;
+  line-height: 40pt;
+  padding-top: 10px;
 }
 .woman-1 {
   border-radius: 8px;
@@ -515,7 +583,7 @@ table#your-table-items tbody td {
 }
 .woman-2 {
   float: right;
-  max-width: 300px;
+  max-height: 200px;
   border-radius: 8px;
   margin-left: 25px;
 }
@@ -585,10 +653,27 @@ table#your-table-items tbody td {
 /* end styling for Gallery */
 
 /* styling for Source Page */
-.source-text {
-  width: 300px;
-  padding-top: 30px;
-  padding-left: 30px;
+/* Container holding the image and the text */
+
+/* Bottom right text */
+.flex-parent-element {
+  display: flex;
+}
+.flex-child-element {
+  flex: 1;
+  margin: 50px;
+}
+
+.flex-child-element:first-child{
+margin-right: 20px;
+}
+.sources-h1 {
+  color:#739462;
+  font-size: 30pt;
+  line-height: 40pt;
+}
+.succulent {
+  border-radius: 10px;
 }
 
 
@@ -620,7 +705,8 @@ table#your-table-items tbody td {
 
 .footer-menu li {
   font-size: 18pt;
-  font-family: "Font Family 4"
+  font-family: "Font Family 4";
+  text-decoration: none;
 }
 
 .footer-menu a {
@@ -777,26 +863,8 @@ table#your-table-items tbody td {
       font-size: 12pt;
       color:#3a6920;
     }
-  video {
-    display: none;
-  }
   .column {
-    float: left;
-    width: 50%;
-    padding: none;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .HalfPgImg {
-    max-width: auto;
-    max-height: auto;
-    padding-top: none;
-    padding-right: 100px;
+    width: 100%;
   }
   .Plant-h2 {
     color: #ff906d;
@@ -804,17 +872,12 @@ table#your-table-items tbody td {
     margin-bottom: 50px;
     font-size: 24pt;
   }
-
   div.scrolling {
     width: 200px;
     height: 200px;
     padding: 20px;
     border: #739462 solid 1px;
     overflow: auto;
-    /* auto - similar to scroll, but it adds scrollbars only when necessary */
-    /* overflow is shortcut for overflow-y and overflow-x */
-    /* https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_overflow-x */
-    /* https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp */
   }
   ul {
     padding: 25px;
@@ -825,32 +888,76 @@ table#your-table-items tbody td {
     line-height: 40px;
     font-size: 14pt;
   }
+  .guide-h1 {
+    color:#739462;
+    font-size: 24pt;
+    line-height: 30pt;
+    padding-top: 40px;
+  }
+  h2 {
+    margin: 0px 0px 10px 0px;
+    color: #ff906d;
+    font-size: 16pt;
+    font-family: "font family 6";
+  }
+  .AtoZ-h1 {
+    color:#739462;
+    font-size: 24pt;
+    line-height: 30pt;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .gallery-h1 {
+    color: #739462;
+    margin-top: 20px;
+    grid-row: 1;
+    grid-column: 1/-1;
+    font-size: 24pt;
+  }
+  .new-h1 {
+    color:#739462;
+    font-size: 24pt;
+    line-height: 30pt;
+    padding-top: 10px;
+  }
 
-  .plant-imagebox {
-    float: right;
-    justify-content: right;
-    align-items: right;
-    margin-top: 20px; 
-    margin-bottom: 10px;
+  .flex-care {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: left;
+  }
+  .flex-child3 {
+  flex: 1;
+  }
+  .flex-child4 {
+  margin-top: 30px;
+  flex: 0 0 100%;
+  margin-left: none;
+  display: grid;
   }
   .care-img-container img{
     height: 400px;
+    margin-left: none;
+    grid-row: 1;
   }
   .care-img-container {
-    float:right;
-    padding: 10px;
+    float: left;
+    padding-top: 10px;
   }
   .plant-care-small-img img {
-    height: 72px;
-    margin: 5px 0;
+    width: 65px;
+    margin: 10px 0;
     cursor: pointer;
-    display: block;
+    display: inline-block;
     opacity: .6;
-    padding-right: 40px;
-  }
 
+  }
+  .plant-care-small-img img:hover {
+    opacity: 3;
+  }
   .plant-care-small-img {
-    float: right;
+    float: left;
+    flex-wrap: wrap;
   }
 
   .footer {
@@ -908,6 +1015,13 @@ table#your-table-items tbody td {
   aside > div > div.scrolling {
     height: 300px;
   }
+  body {
+    margin: 0;
+    font-family: "Font Family 4";
+    font-size: 12pt;
+    background-color: #fffbf4;
+    line-height: 16pt;
+  }
   .hero {
   width: 100vw;
   height: 100vh;
@@ -954,24 +1068,9 @@ table#your-table-items tbody td {
     font-family: "font family 3";
   }
   .column {
-    float: left;
-    width: 35%;
-    padding: none;
+    width: 100%;
   }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-    flex-wrap: wrap;
-  }
-  .HalfPgImg {
-    max-width: auto;
-    max-height: auto;
-    padding-top: none;
-    padding-right: 100px;
-  }
+
   .Plant-h2 {
     color: #ff906d;
     margin-top: 40px;
@@ -985,10 +1084,6 @@ table#your-table-items tbody td {
     padding: 20px;
     border: #739462 solid 1px;
     overflow: auto;
-    /* auto - similar to scroll, but it adds scrollbars only when necessary */
-    /* overflow is shortcut for overflow-y and overflow-x */
-    /* https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_overflow-x */
-    /* https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp */
   }
   ul {
     padding: 25px;
@@ -998,6 +1093,50 @@ table#your-table-items tbody td {
     margin: 5px;
     line-height: 24px;
     font-size: 12pt;
+  }
+  .flex-care {
+    display: flex;
+  }
+  .flex-child3 {
+  flex: 1;
+  }
+  .flex-child4 {
+  margin-top: 30px;
+  flex: 0 0 100%;
+  margin-left: none;
+  display: grid;
+
+  }
+  .care-img-container img{
+    height: 250px;
+    margin-left: none;
+  }
+  .care-img-container {
+    float: left;
+    padding-top: 10px;
+    grid-row: 1;
+  }
+  .plant-care-small-img img {
+    width: 40px;
+    margin: 10px 0;
+    cursor: pointer;
+    display: inline-block;
+    opacity: .6;
+
+  }
+  .plant-care-small-img img:hover {
+    opacity: 3;
+  }
+  .plant-care-small-img {
+    float: left;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .woman-2 {
+    float: left;
+    max-width: 700px;
+    max-height: 200px;
+    border-radius: 8px;
   }
 
   .footer {
@@ -1014,7 +1153,7 @@ table#your-table-items tbody td {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     flex: 1;
   }
   .footer-menu li {
@@ -1025,6 +1164,7 @@ table#your-table-items tbody td {
     list-style: none;
     padding: 0;
     display: flex;
+    flex: 0 0 100%;
     gap: 5px; /* Adjust the gap between icons */
     justify-content: center;
     align-items: center;
